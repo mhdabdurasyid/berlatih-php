@@ -1,8 +1,18 @@
 <?php
 
-function palindrome_angka($angka) {
-  // tulis kode di sini
-  echo "Holla";
+function palindrome_angka($angka)
+{
+    // tulis kode di sini
+    if ($angka >= 0 && $angka <= 8) {
+        $palindrome = $angka + 1;
+        echo "$angka -> $palindrome<br>";
+    } else {
+        echo "$angka -> ";
+        while ((string)$angka != strrev((string)$angka)) {
+            $angka++;
+        }
+        echo "$angka<br>";
+    }
 }
 
 // TEST CASES
