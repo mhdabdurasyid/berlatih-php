@@ -3,18 +3,18 @@
 function papan_catur($angka)
 {
     // tulis kode di sini
-    echo "<pre>";
+    $string = "<pre>";
     for ($i = 0; $i < $angka; $i++) {
         for ($j = 0; $j < $angka; $j++) {
             if ($i % 2 == 0) {
-                echo "# ";
+                $string .= "# ";
             } else if ($i % 2 == 1 && $j < $angka - 1) {
-                echo " #";
+                $string .= " #";
             }
         }
-        echo "<br>";
+        $string .= "<br>";
     }
-    echo "</pre>";
+    return $string . "</pre>";
 }
 
 // TEST CASES
