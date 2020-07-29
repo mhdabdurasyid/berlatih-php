@@ -1,4 +1,5 @@
 <?php
+
 function pasangan_terbesar($angka)
 {
     // kode di sini
