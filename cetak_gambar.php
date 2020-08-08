@@ -5,17 +5,11 @@ function cetak_gambar($num)
     $pattern = "";
     if ($num % 2 == 0) {
         for ($i = 1; $i <= $num; $i++) {
-            if ($i == 1 || $i == $num) {
-                for ($j = 1; $j <= $num; $j++) {
+            for ($j = 1; $j <= $num; $j++) {
+                if ($j % 3 == 0 || $i == 1 || $i == $num) {
                     $pattern .= "+ ";
-                }
-            } else {
-                for ($j = 1; $j <= $num; $j++) {
-                    if ($j % 3 == 0) {
-                        $pattern .= "+ ";
-                    } else {
-                        $pattern .= "= ";
-                    }
+                } else {
+                    $pattern .= "= ";
                 }
             }
             $pattern .= "<br>";
